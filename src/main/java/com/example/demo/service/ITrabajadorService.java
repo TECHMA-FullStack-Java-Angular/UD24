@@ -5,7 +5,7 @@ import com.example.demo.dto.Trabajador;
 
 public interface ITrabajadorService {
 	
-	//metodos CRUD
+	//metodos CRUDgi
 	
 	public List<Trabajador> listarTrabajadores(); //Listar todos 
 	
