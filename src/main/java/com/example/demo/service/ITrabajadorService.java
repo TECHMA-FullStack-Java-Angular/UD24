@@ -2,6 +2,7 @@ package com.example.demo.service;
 import java.util.List;
 
 import com.example.demo.dto.Trabajador;
+import com.example.demo.dto.Trabajo;
 
 public interface ITrabajadorService {
 	
@@ -16,4 +17,6 @@ public interface ITrabajadorService {
 	public Trabajador actualizarTrabajador(Trabajador trabajador); //update
 	
 	public void eliminarTrabajador(int id); //Delete por id
+	
+	public List<Trabajador> listarTrabajadorTrabajo(Trabajo trabajo);//Listar Trabajador por campo trabajo
 }

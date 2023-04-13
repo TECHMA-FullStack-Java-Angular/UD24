@@ -10,9 +10,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.dto.Trabajador;
+import com.example.demo.dto.Trabajo;
 import com.example.demo.service.TrabajadorServiceImpl;
 
 @RestController
@@ -68,4 +70,10 @@ public class TrabajadorController {
 	public void eliminarTrabajador(@PathVariable(name="id")int id) {
 		trabajadorServiceImpl.eliminarTrabajador(id);
 	}
+	
+	@GetMapping("/trabajadores/trabajo/{trabajo}")
+		public List<Trabajador> listarTrabajo(@PathVariable(name="trabajo") String trabajoStr) {
+		    Trabajo trabajo = Trabajo.valueOf(trabajoStr.toUpperCase());
+		    return trabajadorServiceImpl.listarTrabajadorTrabajo(trabajo);
+		}
 }

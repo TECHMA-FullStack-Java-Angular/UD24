@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.example.demo.dao.ItrabajadorDao;
 import com.example.demo.dto.Trabajador;
+import com.example.demo.dto.Trabajo;
 
 @Service
 public class TrabajadorServiceImpl implements ITrabajadorService{
@@ -43,6 +44,12 @@ public class TrabajadorServiceImpl implements ITrabajadorService{
 	public void eliminarTrabajador(int id) {
 		
 		iTrabajadorDao.deleteById(id);
+	}
+
+	@Override
+	public List<Trabajador> listarTrabajadorTrabajo(Trabajo trabajo) {
+		// TODO Auto-generated method stub
+		return iTrabajadorDao.findByTrabajo(trabajo);
 	}
 
 }
