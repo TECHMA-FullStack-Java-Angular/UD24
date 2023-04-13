@@ -3,6 +3,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.example.demo.dto.Trabajador;
 
-public interface ItrabajadorDao extends JpaRepository<Trabajador, Long>{
+public interface ItrabajadorDao extends JpaRepository<Trabajador, Integer>{
 
 }

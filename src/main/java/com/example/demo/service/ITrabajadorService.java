@@ -5,15 +5,15 @@ import com.example.demo.dto.Trabajador;
 
 public interface ITrabajadorService {
 	
-	//metodos CRUDgi
+	//metodos CRUD
 	
 	public List<Trabajador> listarTrabajadores(); //Listar todos 
 	
 	public Trabajador guardarTrabajador(Trabajador trabajador); //create
 	
-	public Trabajador verTrabajador(Long id); //Read
+	public Trabajador verTrabajador(int id); //Read
 	
 	public Trabajador actualizarTrabajador(Trabajador trabajador); //update
 	
-	public void eliminarTrabajador(Long id); //Delete por id
+	public void eliminarTrabajador(int id); //Delete por id
 }

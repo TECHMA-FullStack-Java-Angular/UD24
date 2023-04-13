@@ -33,7 +33,7 @@ public class TrabajadorController {
 	}
 	
 	@GetMapping("/trabajadores/{id}")
-	public Trabajador verCliente(@PathVariable(name="id")Long id) {
+	public Trabajador verTrabajadores(@PathVariable(name="id")int id) {
 		
 		Trabajador trabajadorId= new Trabajador();
 		
@@ -45,7 +45,7 @@ public class TrabajadorController {
 	}
 	
 	@PutMapping("/trabajadores/{id}")
-	public Trabajador actualizarTrabajador(@PathVariable(name="id")Long id, @RequestBody Trabajador trabajador) {
+	public Trabajador actualizarTrabajador(@PathVariable(name="id")int id, @RequestBody Trabajador trabajador) {
 		
 		Trabajador trabajadorSeleccionado = new Trabajador();
 		Trabajador trabajadorActualizado = new Trabajador();
@@ -65,7 +65,7 @@ public class TrabajadorController {
 	}
 	
 	@DeleteMapping("/trabajadores/{id}")
-	public void eliminarTrabajador(@PathVariable(name="id")Long id) {
+	public void eliminarTrabajador(@PathVariable(name="id")int id) {
 		trabajadorServiceImpl.eliminarTrabajador(id);
 	}
 }
